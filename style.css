@@ -14,7 +14,7 @@ html, body {
   flex-direction: column;
   height: 100vh;
 }
-
+/*Title*/
 .top-section {
   background-color: lightblue;
   height: 20%;
@@ -22,7 +22,7 @@ html, body {
   align-items: center;
   justify-content: center;
 }
-
+/*Content*/
 .bottom-section {
   display: flex;
   height: 80%;
@@ -33,7 +33,7 @@ html, body {
   flex-direction: column;
   width: 45%;
 }
-
+/*Crafting*/
 .left-top {
   background-color: lightcoral;
   height: 75%;
@@ -42,7 +42,7 @@ html, body {
   justify-content: center;
   position: relative;
 }
-
+/*Description*/
 .left-bottom {
   background-color: lightgreen;
   height: 25%;
@@ -50,7 +50,7 @@ html, body {
   align-items: center;
   justify-content: center;
 }
-
+/*Materials*/
 .right-column {
   background-color: lightgoldenrodyellow;
   width: 55%;
@@ -59,17 +59,7 @@ html, body {
   justify-content: center;
   position: relative;
 }
-
-.description-box {
-  background-color: white;
-  width: 75%;
-  height: 60%;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
+/*Crafting*/
 .crafting-triangle {
   background-color: white;
   width: 45%;
@@ -79,7 +69,17 @@ html, body {
   justify-content: center;
   align-items: center;
 }
-
+/*Description*/
+.description-box {
+  background-color: white;
+  width: 75%;
+  height: 60%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*Crafting Boxes*/
 .triangle-box {
   width: 100px;
   height: 100px;
@@ -107,7 +107,7 @@ html, body {
   bottom: 0;
   right: 0;
 }
-
+/**/
 .right-square {
   background-color: white;
   width: 80%;
@@ -116,7 +116,7 @@ html, body {
   display: flex;
   flex-direction: column;
 }
-
+/*Material title*/
 .top-portion {
   background-color: lightpink;
   height: 25%;
@@ -124,7 +124,7 @@ html, body {
   align-items: center;
   justify-content: center;
 }
-
+/*Materials*/
 .bottom-portion {
   background-color: lightgray;
   height: 75%;
