@@ -31,20 +31,21 @@ html, body {
 .left-column {
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 45%;
 }
 
 .left-top {
   background-color: lightcoral;
-  height: 80%;
+  height: 75%;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .left-bottom {
   background-color: lightgreen;
-  height: 20%;
+  height: 25%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -52,8 +53,104 @@ html, body {
 
 .right-column {
   background-color: lightgoldenrodyellow;
-  width: 50%;
+  width: 55%;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+}
+
+.description-box {
+  background-color: white;
+  width: 75%;
+  height: 60%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.crafting-triangle {
+  background-color: white;
+  width: 45%;
+  height: 60%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.triangle-box {
+  width: 100px;
+  height: 100px;
+  background-color: lightblue;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #000;
+  font-size: 12px;
+}
+
+.box1 {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.box2 {
+  bottom: 0;
+  left: 0;
+}
+
+.box3 {
+  bottom: 0;
+  right: 0;
+}
+
+.right-square {
+  background-color: white;
+  width: 80%;
+  height: 80%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.top-portion {
+  background-color: lightpink;
+  height: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bottom-portion {
+  background-color: lightgray;
+  height: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y: scroll;
+  padding-top: 50%;/*This needs to be changed for responsiveness*/
+}
+
+.box-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 10px;
+  gap: 25px;
+  justify-content: center;
+}
+
+.small-box {
+  width: 100px;
+  height: 100px;
+  /*padding: 10%;*/
+  background-color: lightblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #000;
 }
