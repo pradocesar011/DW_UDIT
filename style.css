@@ -12,7 +12,7 @@
     }
     /* Title Section */
     .title-section {
-      height: 10%;
+      height: 20%;
       background-color: #333;
       color: white;
       display: flex;
@@ -24,22 +24,37 @@
     /* Main Content (Crafting and Materials) */
     .content-section {
       display: flex;
-      height: 90%;
+      height: 80%;
     }
     /* Crafting Section */
     .crafting-section {
       flex: 1;
       display: flex;
+      height: 80%;
       justify-content: center;
       align-items: center;
       background-color: #f0f0f0;
       position: relative;
     }
+    /* .crafting-top{
+      display: flex;
+      height: 80%;
+    } */
+
     .crafting-box {
       width: 100px;
       height: 100px;
       background-color: #888;
       position: absolute;
+    }
+
+    .crafting-description{
+      flex:1;
+      height: 20%;
+      /* justify-content: center;
+      align-items: center; */
+      background-color: #ccc;
+      text-align: center;
     }
     /* Positioning the crafting boxes as a triangle */
     .crafting-box-1 {
@@ -55,18 +70,6 @@
       bottom: 10%;
       right: 10%;
     }
-    /*Description Section*/
-    .description-box{
-        height: 10%;
-      background-color: #333;
-      color: white;
-      display: flex;
-      justify-content: left;
-      align-items: center;
-      font-size: 2rem;
-      padding-left: 10%;
-    }
-
     /* Materials Section */
     .materials-section {
       flex: 1;
