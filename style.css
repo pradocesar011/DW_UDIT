@@ -1,0 +1,98 @@
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      font-family: Arial, sans-serif;
+    }
+    /* Title Section */
+    .title-section {
+      height: 10%;
+      background-color: #333;
+      color: white;
+      display: flex;
+      justify-content: left;
+      align-items: center;
+      font-size: 2rem;
+      padding-left: 10%;
+    }
+    /* Main Content (Crafting and Materials) */
+    .content-section {
+      display: flex;
+      height: 90%;
+    }
+    /* Crafting Section */
+    .crafting-section {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f0f0f0;
+      position: relative;
+    }
+    .crafting-box {
+      width: 100px;
+      height: 100px;
+      background-color: #888;
+      position: absolute;
+    }
+    /* Positioning the crafting boxes as a triangle */
+    .crafting-box-1 {
+      top: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .crafting-box-2 {
+      bottom: 10%;
+      left: 10%;
+    }
+    .crafting-box-3 {
+      bottom: 10%;
+      right: 10%;
+    }
+    /*Description Section*/
+    .description-box{
+        height: 10%;
+      background-color: #333;
+      color: white;
+      display: flex;
+      justify-content: left;
+      align-items: center;
+      font-size: 2rem;
+      padding-left: 10%;
+    }
+
+    /* Materials Section */
+    .materials-section {
+      flex: 1;
+      background-color: #eaeaea;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .materials-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-auto-rows: 100px;
+      grid-gap: 10px;
+      overflow-y: scroll;
+      max-height: 90%;
+      padding: 10px;
+      width: 90%;
+      background-color: #ddd;
+      border: 1px solid #ccc;
+    }
+    .material-box {
+      background-color: #bbb;
+      border: 1px solid #999;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.5rem;
+    }
+  
