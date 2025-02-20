@@ -19,8 +19,14 @@ html, body {
   background-color: lightblue;
   height: 20%;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items:flex-end;
+  justify-content: left;
+  padding-left: 10%;
+  /* margin-top: 5%;needs to be changed */
+}
+
+.top-section h1{
+  font-size: 400%;
 }
 /*Content*/
 .bottom-section {
@@ -124,23 +130,44 @@ html, body {
   align-items: center;
   justify-content: center;
 }
+
+.top-portion h1{
+  font-size: 300%;
+  position: absolute;
+  bottom: 75%;
+  left: 0;
+  padding-left: 10%;
+  padding-bottom: 2%;
+}
+.top-portion h2{
+  font-size: 300%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-right: 10%;
+  padding-top: 2%;
+}
+
 /*Materials*/
 .bottom-portion {
   background-color: lightgray;
   height: 75%;
-  display: flex;
+  /* display: flex; */
   align-items: center;
   justify-content: center;
   overflow-y: scroll;
-  padding-top: 50%;/*This needs to be changed for responsiveness*/
+  /*padding-top: 50%;*//*This needs to be changed for responsiveness*/
 }
+
+
+
 
 .box-container {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
   padding: 10px;
-  gap: 25px;
+  gap: 50px;
   justify-content: center;
 }
 
