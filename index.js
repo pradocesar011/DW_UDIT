@@ -1,47 +1,47 @@
-    //Comment
-    console.log('Vibe Checker');
-
-    //var       --> Declare Variable
-    //let       --> Declare Variable
-    //const     --> Declare Constant
-    let name = 'Name';
-    const birthYear = 2000;
-    let currentYear = 2025;
-    console.log(name);
-
-
-    //Reference types: obejects, arrays & functions
-    
-    // Objects
-    let person = {
-        firstName: "Ana",
-        age: 30
+$(document).ready(function() {
+    // Function to fill the left boxes when right boxes are clicked
+    $('.right').click(function() {
+      var letter = $(this).data('letter');
+  
+      // Find the first empty left box
+      var emptyBox = $('.left').filter(function() {
+        return $(this).text() === '';
+      }).first();
+  
+      // If there's an empty left box, fill it with the clicked letter
+      if (emptyBox.length) {
+        emptyBox.text(letter);
+      }
+  
+      // Check if all three left boxes are filled
+      checkLeftBoxes();
+    });
+  
+    // Function to clear a left box when it's clicked
+    $('.left').click(function() {
+      $(this).text('');
+      // Clear the center box if a left box is clicked
+      $('.center').text('');
+      $('.center-box').hide();
+    });
+  
+    // Function to clear the center box when it's clicked
+    $('.center').click(function() {
+      $(this).text('');
+      $('.center-box').hide();
+    });
+  
+    // Function to check if all three left boxes are filled
+    function checkLeftBoxes() {
+      var filledLetters = $('.left').map(function() {
+        return $(this).text();
+      }).get().join('');
+  
+      // If all three left boxes are filled, show the center box
+      if (filledLetters.length === 3) {
+        $('.center').text(filledLetters);
+        $('.center-box').show();
+      }
     }
-    //Dot Notation
-    person.firstName ='Antonio';
-    //Bracket Notation (dinamic properties)
-    person['name']='Ainara';
-
-    //Arrays
-    let selectedColors = ['red','blue']
-    selectedColors[2]='2';
-    console.log(selectedColors[0]);
-    console.log(selectedColors.length);
-
-    //Functions
-    function greet(name){           //(parameter)
-        console.log('Hello '+ name);
-    }
-
-    greet('John');                  //(argument)
-    greet('Mary'); 
-
-    function calculateAge(birthYear, currentYear){
-        return currentYear - birthYear
-    }
-
-    //let age = calculateAge(birthYear, currentYear);
-    //console.log(age);
-
-    console.log(calculateAge(birthYear, currentYear));
-
+  });
+  
