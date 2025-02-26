@@ -68,8 +68,8 @@ html, body {
 /*Crafting*/
 .crafting-triangle {
   background-color: white;
-  width: 45%;
-  height: 60%;
+  width: 70%;
+  height: 70%;
   position: relative;
   display: flex;
   justify-content: center;
@@ -113,6 +113,20 @@ html, body {
   bottom: 0;
   right: 0;
 }
+
+.center-box {
+  width: 100px;
+  height: 100px;
+  background-color: lightblue;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #000;
+  font-size: 12px;
+}
+
+
 /**/
 .right-square {
   background-color: white;

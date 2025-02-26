@@ -1,47 +1,82 @@
-    //Comment
-    console.log('Vibe Checker');
+$(document).ready(function() {
+    const leftBoxes = $('.triangle-box');
+    const rightBoxes = $('.small-box img');
+    const centerBox = $('.center-box');
+    let selectedImages = [];
 
-    //var       --> Declare Variable
-    //let       --> Declare Variable
-    //const     --> Declare Constant
-    let name = 'Name';
-    const birthYear = 2000;
-    let currentYear = 2025;
-    console.log(name);
+    // Initially hide the center box
+    centerBox.hide();
 
+    // Mapping combinations to a specific image for the center box
+    const combinationImages = {
+        'Media/Algunas Gemas/Ruby.webp+Media/Algunas Gemas/Sapphire.webp+Media/Algunas Gemas/Emerald.webp': 'Media/Algunas Gemas/Diamond.webp',
+        // Add more combinations here if necessary
+    };
 
-    //Reference types: obejects, arrays & functions
-    
-    // Objects
-    let person = {
-        firstName: "Ana",
-        age: 30
-    }
-    //Dot Notation
-    person.firstName ='Antonio';
-    //Bracket Notation (dinamic properties)
-    person['name']='Ainara';
+    // Function to extract the filename from the image path without the extension
+    const getFileName = (path) => {
+        const fileNameWithExt = path.split('/').pop(); // Extract the file with extension
+        const fileName = fileNameWithExt.split('.')[0].toLowerCase(); // Remove the extension and convert to lowercase
+        return fileName;
+    };
 
-    //Arrays
-    let selectedColors = ['red','blue']
-    selectedColors[2]='2';
-    console.log(selectedColors[0]);
-    console.log(selectedColors.length);
+    // Function to update the left boxes with images
+    const updateLeftBoxes = () => {
+        leftBoxes.each(function(index) {
+            if (selectedImages[index]) {
+                $(this).html(`<img src="${selectedImages[index]}" alt="gem">`); // Fill left boxes with images
+            } else {
+                $(this).empty(); // Clear the box if no image
+            }
+        });
+    };
 
-    //Functions
-    function greet(name){           //(parameter)
-        console.log('Hello '+ name);
-    }
+    // Function to update the center box with the combination of selected images
+    const updateCenterBox = () => {
+        if (selectedImages.length === 3) {
+            const combinationKey = selectedImages
+                .map(img => getFileName(img))
+                .sort()
+                .join('+'); // Create the combination key
+            console.log("Combination Key: ", combinationKey); // Debugging log
+            const centerImage = combinationImages[combinationKey];
 
-    greet('John');                  //(argument)
-    greet('Mary'); 
+            if (centerImage) {
+                centerBox.html(`<img src="${centerImage}" alt="center-image">`);
+                console.log("Displaying image: ", centerImage); // Debugging log
+            } else {
+                centerBox.text('No match');
+                console.log("No match found for the combination."); // Debugging log
+            }
+            centerBox.show(); // Show the center box when all 3 triangle boxes are filled
+        } else {
+            centerBox.hide(); // Hide the center box if less than 3 triangle boxes are filled
+        }
+    };
 
-    function calculateAge(birthYear, currentYear){
-        return currentYear - birthYear
-    }
+    // Function to handle clicks on right boxes (images)
+    const handleRightBoxClick = (imageSrc) => {
+        if (selectedImages.length < 3) {
+            selectedImages.push(imageSrc); // Add image src to the array
+            console.log("Selected Images: ", selectedImages); // Debugging log
+            updateLeftBoxes(); // Update left boxes with the selected images
+            updateCenterBox(); // Check if all three are filled, then update center box
+        }
+    };
 
-    //let age = calculateAge(birthYear, currentYear);
-    //console.log(age);
+    // Event listener for right boxes (click on image)
+    rightBoxes.click(function() {
+        const imageSrc = $(this).attr('src');
+        handleRightBoxClick(imageSrc);
+    });
 
-    console.log(calculateAge(birthYear, currentYear));
-
+    // Event listener for left boxes to clear them individually when clicked
+    leftBoxes.click(function() {
+        const index = leftBoxes.index(this);
+        if (selectedImages[index]) {
+            selectedImages.splice(index, 1); // Remove the image from the array
+            updateLeftBoxes(); // Update left boxes
+            updateCenterBox(); // Hide the center box if less than 3 boxes are filled
+        }
+    });
+});
