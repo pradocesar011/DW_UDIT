@@ -16,7 +16,8 @@ html, body {
 }
 /*Title*/
 .top-section {
-  background-color: lightblue;
+  /*background-color: lightblue;*/
+  background-image:url("Media/UI/BlueBG1.jpg");
   height: 20%;
   display: flex;
   align-items:flex-end;
@@ -30,6 +31,8 @@ html, body {
 }
 /*Content*/
 .bottom-section {
+  background-image:url("Media/UI/BlueBG3.jpg");
+  /*border: 10px ;*/
   display: flex;
   height: 80%;
 }
@@ -41,7 +44,7 @@ html, body {
 }
 /*Crafting*/
 .left-top {
-  background-color: lightcoral;
+  /*background-color: lightcoral;*/
   height: 75%;
   display: flex;
   align-items: center;
@@ -50,7 +53,7 @@ html, body {
 }
 /*Description*/
 .left-bottom {
-  background-color: lightgreen;
+  /*background-color: lightgreen;*/
   height: 25%;
   display: flex;
   align-items: center;
@@ -58,7 +61,7 @@ html, body {
 }
 /*Materials*/
 .right-column {
-  background-color: lightgoldenrodyellow;
+  /*background-color: lightgoldenrodyellow;*/
   width: 55%;
   display: flex;
   align-items: center;
@@ -67,8 +70,8 @@ html, body {
 }
 /*Crafting*/
 .crafting-triangle {
-  background-color: white;
-  width: 70%;
+  /*background-color: white;*/
+  width: 60%;
   height: 70%;
   position: relative;
   display: flex;
