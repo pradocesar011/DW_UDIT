@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Craft Oculi Edition</title>
+  <link rel="stylesheet" href="MainStyle.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <div class="main-container">
+    <div class="logo-container">
+      <img src="Media/UI/Title&LogoWhite.png" alt="Craft Oculi" class="logo">
+      <h1>Craft Oculi Edition</h1>
+    </div>
+    <div class="options-container">
+      <a href="CraftOculi.html" class="option">Start Crafting</a>
+      <span class="option how-to-craft">How to Craft</span>
+    </div>
+  </div>
+
+  <!-- Hidden How to Craft Image -->
+  <div class="how-to-craft-image" style="display: none;">
+    <div class="close-btn">&#x2190;</div>
+    <img src="Media/UI/Tutorial1.png" alt="How to Craft" class="craft-guide">
+  </div>
+
+  <script>
+    $(document).ready(function() {
+      $('.how-to-craft').click(function() {
+        $('.how-to-craft-image').fadeIn();
+      });
+
+      $('.close-btn').click(function() {
+        $('.how-to-craft-image').fadeOut();
+      });
+    });
+  </script>
+</body>
+</html>
