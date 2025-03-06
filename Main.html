@@ -24,9 +24,9 @@
 
     <!-- Hidden How to Craft Section -->
     <div class="how-to-craft-container" style="display: none;">
-      <div class="close-btn">&#x2190;</div>
+      <div class=" how-to-close-btn">&#x2190;</div>
       <div class="how-to-craft-content">
-        <img src="Media/UI/Tutorial1.png" alt="How to Craft" class="craft-guide">
+        <img src="Media/UI/Tutorial1.png" alt="How to Craft" class="craft-guide"><br>
         <div class="craft-description">
           <h2>How to Craft</h2>
           <p>Follow these simple steps to craft your Oculi! Select the right materials and mix them to create unique combinations.</p>
@@ -36,19 +36,29 @@
     
     <!-- Hidden Registration Section -->
     <div class="registration-container" style="display: none;">
-      <div class="close-btn">&#x2190;</div>
+      <div class=" registration-close-btn">&#x2190;</div>
       <div class="registration-content">
         <h2>Register Now</h2>
         <form id="registration-form">
-          <label for="username">Username:</label>
-          <input type="text" id="username" name="username" required>
-
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required>
-
-          <label for="password">Password:</label>
-          <input type="password" id="password" name="password" required>
-
+          <div>
+            <label for="username">Username:</label>
+            <br>
+            <input type="text" id="username" name="username" required>
+          </div>
+          
+          <div>
+            <label for="email">Email:</label>
+            <br>
+            <input type="email" id="email" name="email" required>
+          </div>
+          
+          <div>
+            <label for="password">Password:</label>
+            <br>
+            <input type="password" id="password" name="password" required>
+          </div>
+          
+          <br>
           <button type="submit">Register</button>
         </form>
       </div>

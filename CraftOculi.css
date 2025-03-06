@@ -1,23 +1,45 @@
+@font-face {
+  font-family: Dante;
+  src: url(Fonts/DanteMTStd-Regular.ttf);
+  font-family: Goca;
+  src: url(Fonts/Goca\ logotype\ beta.ttf);
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Dante;
 }
 
 html, body {
   height: 100%;
   font-family: Arial, sans-serif;
+  background-image:url("Media/UI/BlueBG2.jpg");
+}
+
+h1{
+  font-family: Goca;
+}
+
+h2{
+  font-family: Goca;
+}
+
+p{
+  font-family: Dante;
 }
 
 .container {
   display: flex;
   flex-direction: column;
   height: 100vh;
+  
 }
 /*Title*/
 .top-section {
   /*background-color: lightblue;*/
-  background-image:url("Media/UI/BlueBG2.jpg");
+  /* background-image:url("Media/UI/BlueBG2.jpg"); */
   background-size: cover;
   height: 20%;
   display: flex;
@@ -93,7 +115,7 @@ html, body {
   background-color: white;
   width: 75%;
   height: 60%;
-  border-radius: 25%;
+  border-radius: 15px;
   font-size:200%;
   position: relative;
   display: flex;
@@ -247,3 +269,17 @@ html, body {
   align-items: center;
   justify-content: center;
 }
+
+.return-btn {
+  position: fixed;  
+  top: 20px;        
+  left: 20px;       
+  padding: 15px 30px; 
+  background-color: rgba(192, 192, 192, 0.8);; 
+  color: #007bff;   
+  border: none;     
+  border-radius: 15px;
+  font-size: 24px;  
+  cursor: pointer;
+  z-index: 1000;    
+}    

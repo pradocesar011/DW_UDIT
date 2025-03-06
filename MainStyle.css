@@ -1,129 +1,219 @@
+@font-face {
+  font-family: Dante;
+  src: url(Fonts/DanteMTStd-Regular.ttf);
+  font-family: Goca;
+  src: url(Fonts/Goca\ logotype\ beta.ttf);
+}
+
 /* Main container layout and background */
 body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    font-family: Arial, sans-serif;
-    box-sizing: border-box;
-  }
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Dante;
+  box-sizing: border-box;
   
-  body {
-    background: url('Media/UI/Hero1.png') no-repeat center center fixed;
-    background-size: cover;
-  }
-  
-  .main-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    text-align: center;
-    color: white;
-  }
-  
-  /* Logo and Title Styling */
-    .logo-container {
-    margin-bottom: 50px;
-    background-color: rgba(107, 107, 107, 0.5); /* Light gray with 50% transparency */
-    padding: 20px; /* Add padding for spacing around the logo */
-    border-radius: 15px; /* Rounded borders */
-  }
-  
-  
-  .logo {
-    max-width: 250px;
-    height: auto;
-  }
-  
+}
+
+body {
+  background: url('Media/UI/Hero1.png') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  color: white;
+}
+
+/* Logo and Title Styling */
+.logo-container {
+  margin-bottom: 50px;
+  background-color: rgba(107, 107, 107, 0.5); /* Light gray with 50% transparency */
+  padding: 20px; /* Add padding for spacing around the logo */
+  border-radius: 15px; /* Rounded borders */
+}
+
+.logo {
+  max-width: 250px;
+  height: auto;
+}
+
+h1 {
+  font-size: 1.5em;
+  font-family: Goca;
+  letter-spacing: 3px;
+}
+
+h2 {
+  font-family: Goca;
+  letter-spacing: 3px;
+}
+
+p{
+  letter-spacing: 2px;
+}
+
+.options-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+}
+
+.option {
+  font-size: 1.5em;
+  cursor: pointer;
+  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.option:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+/* Hidden sections should overlay the main content */
+.how-to-craft-content {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.registration-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.craft-guide {
+  max-width: 90%;
+  max-height: 80%;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  color: black;
+  align-items: center;
+
+}
+
+.craft-description{
+  color: aliceblue;
+  text-align: center;
+  background-color: rgba(192, 192, 192, 0.8);
+  border-radius: 10px;
+  max-width:300px;
+  padding: 10px;
+}
+
+.registration-content {
+  max-width: 90%;
+  max-height: 80%;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  color: black;
+  align-items: center;
+
+}
+
+/* .close-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 2em;
+  color: white;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.close-btn:hover {
+  color: lightgray;
+} */
+
+
+.how-to-close-btn{
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 2em;
+  color: white;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.how-to-close-btn:hover {
+  color: lightgray;
+}
+
+.registration-close-btn{
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 2em;
+  color: white;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.registration-close-btn:hover {
+  color: lightgray;
+}
+
+
+/* Responsive Design */
+@media (max-width: 1024px) {
   h1 {
     font-size: 1.5em;
-    /* margin: 10px 0; */
   }
-  
-  /* Options Styling */
-  .options-container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    justify-content: center;
+  .logo {
+    max-width: 250px;
   }
-  
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1em;
+  }
+  .logo {
+    max-width: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 0.5em;
+  }
+  .logo {
+    max-width: 150px;
+  }
   .option {
-    font-size: 1.5em;
-    cursor: pointer;
-    padding: 10px 20px;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-    transition: background-color 0.3s ease;
+    font-size: 1.2em;
   }
-  
-  .option:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 1024px) {
-    h1 {
-      font-size: 1.5em;
-    }
-    .logo {
-      max-width: 250px;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    h1 {
-      font-size: 1.5em;
-    }
-    .logo {
-      max-width: 150px;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    h1 {
-      font-size: 1.5em;
-    }
-    .logo {
-      max-width: 150px;
-    }
-    .option {
-      font-size: 1.2em;
-    }
-  }
-  
-  /* How to Craft Image */
-  .how-to-craft-image {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .craft-guide {
-    max-width: 90%;
-    max-height: 80%;
-    border-radius: 10px;
-  }
-  
-  .close-btn {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    font-size: 2em;
-    color: white;
-    cursor: pointer;
-    z-index: 10;
-  }
-  
-  .close-btn:hover {
-    color: lightgray;
-  }
-  
+}

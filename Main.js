@@ -9,9 +9,13 @@ $(document).ready(function() {
         $('.registration-container').fadeIn();
     });
 
-    // Close Buttons
-    $('.close-btn').click(function() {
-        $(this).parent().fadeOut();
+    // Close Buttons with unique selectors
+    $('.how-to-close-btn').click(function() {
+        $('.how-to-craft-container').fadeOut();
+    });
+
+    $('.registration-close-btn').click(function() {
+        $('.registration-container').fadeOut();
     });
 
     // Simple Form Validation
