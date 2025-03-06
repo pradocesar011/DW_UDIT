@@ -228,3 +228,22 @@ html, body {
   justify-content: center;
   /*border: 1px solid #000;*/
 }
+
+.small-box {
+  position: relative;
+}
+
+.corner-box {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 20px;
+  height: 20px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 3px;
+  font-size: 12px;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

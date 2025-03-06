@@ -1,40 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Craft Oculi Edition</title>
-  <link rel="stylesheet" href="MainStyle.css">
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-</head>
-<body>
-  <div class="main-container">
-    <div class="logo-container">
-      <img src="Media/UI/Title&LogoWhite.png" alt="Craft Oculi" class="logo">
-      <h1>Craft Oculi Edition</h1>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Craft Oculi Edition</title>
+    <link rel="stylesheet" href="MainStyle.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="Main.js"></script>
+  </head>
+
+  <body>
+    <div class="main-container">
+      <div class="logo-container">
+        <img src="Media/UI/Title&LogoWhite.png" alt="Craft Oculi" class="logo">
+        <h1>Craft Oculi Edition</h1>
+      </div>
+      <div class="options-container">
+        <a href="CraftOculi.html" class="option">Start Crafting</a>
+        <span class="option how-to-craft">How to Craft</span>
+        <span class="option register-btn">Register</span>
+      </div>
     </div>
-    <div class="options-container">
-      <a href="CraftOculi.html" class="option">Start Crafting</a>
-      <span class="option how-to-craft">How to Craft</span>
+
+    <!-- Hidden How to Craft Section -->
+    <div class="how-to-craft-container" style="display: none;">
+      <div class="close-btn">&#x2190;</div>
+      <div class="how-to-craft-content">
+        <img src="Media/UI/Tutorial1.png" alt="How to Craft" class="craft-guide">
+        <div class="craft-description">
+          <h2>How to Craft</h2>
+          <p>Follow these simple steps to craft your Oculi! Select the right materials and mix them to create unique combinations.</p>
+        </div>
+      </div>
     </div>
-  </div>
+    
+    <!-- Hidden Registration Section -->
+    <div class="registration-container" style="display: none;">
+      <div class="close-btn">&#x2190;</div>
+      <div class="registration-content">
+        <h2>Register Now</h2>
+        <form id="registration-form">
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" required>
 
-  <!-- Hidden How to Craft Image -->
-  <div class="how-to-craft-image" style="display: none;">
-    <div class="close-btn">&#x2190;</div>
-    <img src="Media/UI/Tutorial1.png" alt="How to Craft" class="craft-guide">
-  </div>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
 
-  <script>
-    $(document).ready(function() {
-      $('.how-to-craft').click(function() {
-        $('.how-to-craft-image').fadeIn();
-      });
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required>
 
-      $('.close-btn').click(function() {
-        $('.how-to-craft-image').fadeOut();
-      });
-    });
-  </script>
-</body>
+          <button type="submit">Register</button>
+        </form>
+      </div>
+    </div>
+  </body>
 </html>

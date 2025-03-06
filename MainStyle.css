@@ -83,10 +83,10 @@ body, html {
   
   @media (max-width: 480px) {
     h1 {
-      font-size: 0.6em;
+      font-size: 1.5em;
     }
     .logo {
-      max-width: 100px;
+      max-width: 150px;
     }
     .option {
       font-size: 1.2em;
