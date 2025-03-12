@@ -30,6 +30,55 @@ p{
   font-family: Dante;
 }
 
+/* Volume control box */
+#volume-control {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 8px;
+  color: white;
+}
+
+/* Volume logo */
+.volume-icon {
+  margin-right: 10px;
+  font-size: 24px;
+}
+
+/* Volume slider */
+#volume-slider {
+  -webkit-appearance: none;
+  width: 100px;
+  height: 5px;
+  background: #fff;
+  border-radius: 5px;
+  outline: none;
+  opacity: 0.8;
+}
+
+#volume-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #ff9800;
+  cursor: pointer;
+}
+
+#volume-slider::-moz-range-thumb {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #ff9800;
+  cursor: pointer;
+}
+
+
+
 .container {
   display: flex;
   flex-direction: column;

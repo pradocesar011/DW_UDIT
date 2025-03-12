@@ -1,4 +1,22 @@
 $(document).ready(function () {
+    var isClicked = false;
+
+    // $('#characterBtn').on('click', function() {
+    //     if (!isClicked) {
+            
+    //         // Disable further clicks
+    //         isClicked = true;
+
+    //         // Re-enable the button after 1 second (1000ms)
+    //         setTimeout(function() {
+    //             isClicked = false;
+    //         }, 10000);
+    //     }
+    // });
+    
+    
+    
+    
     $(".right-content").hide(); // Hide all right side content initially
 
     $(".left-image").click(function () {

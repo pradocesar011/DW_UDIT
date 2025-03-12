@@ -1,3 +1,33 @@
+@font-face {
+    font-family: Dante;
+    src: url(Fonts/DanteMTStd-Regular.ttf);
+    font-family: Goca;
+    src: url(Fonts/Goca\ logotype\ beta.ttf);
+  }
+
+
+  * {
+    font-family: Dante;
+  }
+
+  h1{
+    font-family: Goca;
+    font-size:115%;
+
+  }
+  
+  h2{
+    font-family: Goca;
+    font-size:200%;
+
+  }
+  
+  p{
+    font-family: Dante;
+    font-size:115%;
+
+  }
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -6,7 +36,8 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f0f0f0;
+    /* background-color: #f0f0f0; */
+    background-image:url("Media/UI/BlueBG2.jpg");
 }
 
 .container {
@@ -26,12 +57,16 @@ body {
 }
 
 .left-side {
-    background-color: lightblue;
+    background-color:rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    /* border: 5px solid rgb(59, 59, 59, 0.1); */
 }
 
 .right-side {
-    background-color: lightcoral;
+    background-color: rgba(0, 0, 0, 0.2);
     position: relative;
+    border-radius: 8px;
+    /* border: 5px solid rgb(59, 59, 59, 0.1); */
 }
 
 /* .version1{
@@ -45,17 +80,53 @@ body {
 } */
 
 .image-container {
-    margin: 10px 0;
+    margin: 0px 0;
 }
+.image-containerMAPS {
+    margin: 40px 0;
+}
+
 
 .image-container img {
     width: 150px;
-    height: auto;
+    height: 150px;
     cursor: pointer;
     display: block;
     margin: 0 auto;
+    /* width: 100%;
+    height: 100%; */
+    object-fit: cover;
+    border: 5px solid rgb(59, 59, 59);
+    border-radius: 8px;
 }
+.image-containerMAPS img {
+    width: 320px;
+    height: 170px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    /* width: 100%;
+    height: 100%; */
+    object-fit: cover;
+    border: 5px solid rgb(59, 59, 59);
+    border-radius: 8px;
+}
+
 
 .right-content {
     display: none;
 }
+
+.return-btn {
+    position: fixed;  
+    top: 20px;        
+    left: 20px;       
+    padding: 15px 30px; 
+    background-color: rgba(192, 192, 192, 0.8);; 
+    color: #007bff;   
+    border: none;     
+    border-radius: 15px;
+    font-size: 24px;  
+    cursor: pointer;
+    z-index: 1000;    
+  }    

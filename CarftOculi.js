@@ -12,6 +12,28 @@ $(document).ready(function() {
         spinel: 1,
         princessStone: 0
     };
+
+
+    // Reference to the audio element
+    var music = document.getElementById('background-music');
+
+    // Check if the audio element and slider are loaded properly
+    if (music) {
+        console.log('Audio element found:', music);
+    } else {
+        console.log('Audio element not found!');
+    }
+
+    // Handle the volume slider change event
+    $('#volume-slider').on('input', function () {
+        var volume = $(this).val() / 100; // Convert slider value (0-100) to volume (0-1)
+        music.volume = volume; // Set the volume of the audio element
+
+        // Logging the slider value and resulting volume
+        console.log('Slider value:', $(this).val(), 'Volume set to:', volume);
+    });
+
+
     
     // Add a corner box with the respective gem value to each .small-box
     $('.small-box').each(function () {
