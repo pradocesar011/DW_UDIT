@@ -30,6 +30,10 @@ body {
   color: white;
 }
 
+.options a{
+  color:white;
+}
+
 /* Logo and Title Styling */
 .logo-container {
   margin-bottom: 50px;
